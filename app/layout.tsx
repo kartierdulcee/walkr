@@ -23,6 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex min-h-screen flex-col bg-transparent">
           <div className="flex-1">{children}</div>
         </main>
+        <div className="snow-container" aria-hidden="true">
+          <div className="snow" />
+        </div>
       </body>
     </html>
   );

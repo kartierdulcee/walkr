@@ -95,6 +95,7 @@ export function BookingForm() {
         <p className="tag">Booking</p>
         <h3 className="mt-2 text-2xl font-semibold text-bark-800">Tell me about your dog</h3>
         <p className="text-bark-700">Pick your block time and plan. Fast response during daylight hours.</p>
+        <p className="mt-2 text-sm font-semibold text-bark-800">Accepted: Zelle, Cash App, Venmo, Cash.</p>
         {formError && <p className="mt-2 text-sm font-semibold text-red-600">{formError}</p>}
       </div>
       <div className="space-y-2">
