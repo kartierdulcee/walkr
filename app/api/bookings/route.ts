@@ -1,11 +1,25 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
-
-const DATA_PATH = path.join(process.cwd(), 'data', 'bookings.json');
+import { appendBooking, deleteBooking, readBookings } from '@/lib/bookings-store';
 
 export async function GET() {
-  const raw = await fs.readFile(DATA_PATH, 'utf8').catch(() => '[]');
-  const bookings = JSON.parse(raw);
+  const bookings = await readBookings();
   return NextResponse.json({ bookings });
+}
+
+export async function POST(request: Request) {
+  const payload = await request.json();
+  const saved = await appendBooking(payload);
+  return NextResponse.json({ booking: saved });
+}
+
+export async function DELETE(request: Request) {
+  const { id } = await request.json();
+  if (!id) {
+    return NextResponse.json({ error: 'Missing id' }, { status: 400 });
+  }
+  const deleted = await deleteBooking(id);
+  if (!deleted) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  }
+  return NextResponse.json({ status: 'deleted' });
 }

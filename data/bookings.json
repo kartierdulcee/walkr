@@ -3,6 +3,18 @@
     "name": "Nuri",
     "dogName": "Huncho",
     "timeSlot": "7–9 AM",
+    "plan": "twice-daily",
+    "customTime": "",
+    "phone": "3133167826",
+    "notes": "",
+    "id": "4990f155-b359-4e3f-86f2-7aa8d7d9343a",
+    "createdAt": "2025-11-24T18:51:52.193Z",
+    "status": "new"
+  },
+  {
+    "name": "Nuri",
+    "dogName": "Huncho",
+    "timeSlot": "7–9 AM",
     "plan": "custom",
     "customTime": "",
     "phone": "3133167826",

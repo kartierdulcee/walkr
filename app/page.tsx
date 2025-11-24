@@ -19,7 +19,12 @@ export default function HomePage() {
       <div className="mb-8 max-w-2xl space-y-2 text-center">
         <p className="tag mx-auto w-fit">Book a walk</p>
         <h1 className="text-3xl font-bold text-bark-800 sm:text-4xl">Schedule your dog walk</h1>
-        <p className="text-bark-700">Serving Boston Eddison District, 7 days a week.</p>
+        <p className="text-bark-700">Serving Boston Eddison District, 5 days a week.</p>
+        <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm font-semibold text-bark-800">
+          <span className="tag">Insured walker</span>
+          <span className="tag">Neighborhood routes only</span>
+          <span className="tag">Perfect for busy owners</span>
+        </div>
       </div>
 
       <div className="grid w-full max-w-5xl gap-5 lg:grid-cols-[1.6fr_1fr]">
